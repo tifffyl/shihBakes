@@ -46,7 +46,7 @@ btnCheckOut.addEventListener("click", () => {
     console.log("product 2 is ", productTwoID, "and its quantity is", productTwoQty)
 
 
-    fetch("http://localhost:3000/create-checkout-session", {
+    fetch("https://shihbakes.herokuapp.com/create-checkout-session", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
