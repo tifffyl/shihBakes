@@ -1,3 +1,5 @@
+const SERVER_URL_STRIPE = "http://localhost:3000/create-checkout-session"
+
 
 const products = [//array containing objects (product information)
     {
@@ -46,7 +48,7 @@ btnCheckOut.addEventListener("click", () => {
     console.log("product 2 is ", productTwoID, "and its quantity is", productTwoQty)
 
 
-    fetch("https://shihbakes.herokuapp.com/create-checkout-session", {
+    fetch( SERVER_URL_STRIPE, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -54,7 +56,8 @@ btnCheckOut.addEventListener("click", () => {
         body: JSON.stringify({
             items: [
                 {id: productOneID, quantity: productOneQty },
-                {id: productTwoID, quantity: productTwoQty }
+                {id: productTwoID, quantity: productTwoQty },
+                {id: 3, quantity: 1 }
             ],
         }),
     })
