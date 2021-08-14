@@ -1,0 +1,243 @@
+
+//font styling 
+.product-title{
+    font-weight: 800;
+    z-index: 6; 
+}
+.text-container{
+    z-index: 5; 
+}
+.background{
+    z-index: 4; 
+}
+.product-container{
+    z-index: 3; 
+}
+.product{
+    z-index:2;
+}
+.body-rectangle{
+    z-index: 1;
+}
+.body-item{
+    z-index: 0; 
+}
+
+@media only screen and (max-width:4000px) { 
+
+    .menu-text {
+        text-align: center;
+        color: $main-orange; 
+        h2{
+            padding: 0 10px 0 10px; 
+            font-size: 2vw;
+            margin: 1vw;
+        }
+        .call-text{
+            margin-bottom: 20px; 
+        }
+    }
+    
+    .call-button{
+        height:50px;
+        width: 250px;
+        border-radius:50px;
+        background-color: $main-orange;
+        color: white; 
+        font-size: 17.5px;
+        font-family: montserrat; 
+        margin-bottom: 50px; 
+    }
+
+    //product styles
+
+//product text styles
+.product{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;  
+
+    &-container{
+        height: 77%;
+        width: 80%;
+
+        .text-container{
+            background-color: white; 
+            width: 100%; 
+            padding: 20px;
+            position: relative;
+            bottom: 30%;
+            border-radius: 0 0 25px 25px; 
+
+            .product-title{
+                font-size: 30px;
+                color: $black;
+                margin-bottom: 5px;
+
+            }
+            .product-description{
+                font-size: 15px;
+                color: #7E7876;
+
+            }
+        }
+    }
+
+
+    //shape properties of the product background
+    .background{
+        height: 100%; 
+        width: 100%; 
+        z-index: -10;
+        border-radius: 25px;
+    }
+    //colours of the product background
+    .yellow-back{
+        background-color: $light-yellow;
+    }
+
+    .pink-back{
+        background-color: $pink;
+    }
+
+    //responsive image sizing
+    img{
+        width:20vw;
+        z-index:3; 
+        margin-left: 2.5vw;
+    }
+}
+}
+
+
+
+$desktop: 1400px;
+$tablet: 780px;
+$phone: 375px; 
+
+@media only screen and (max-width: 1200px) { //makes product taller, and wider to fit all the text
+    .product-container{
+        width: 90%;
+        height: 80%;
+        .text-container{
+            background-color: s; 
+            width: 100%; 
+            padding: 20px;
+            position: relative;
+            bottom: 20%;
+            border-radius: 0 0 25px 25px;
+    }
+    img{
+        width: 23vw;
+        margin-top: 20px; 
+    }
+}
+}
+
+
+@media only screen and (max-width: 780px) {
+    
+    .menu-text {
+        h2{
+            font-size: 2.75vw;
+        }
+    }
+
+    .product{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media only screen and (max-width: 750px) {
+    
+    
+    .menu-text {
+        h2{
+            font-size: 3vw;
+        }
+        .call-text{
+            margin-bottom: 20px;
+        }
+    }
+    
+    
+    .product{
+        .product-title{
+            font-size: 5px; 
+        }
+        img{
+            width: 40vw; 
+        }
+        .product-container{
+            width: 90%;
+            height: 87%;
+                .text-container{
+                    background-color: s; 
+                    width: 100%; 
+                    padding: 20px;
+                    position: relative;
+                    bottom: 14%;
+                    border-radius: 0 0 25px 25px;
+                }
+                img{
+                    width: 40vw;
+                    margin-top: 0px; 
+                }
+            }
+    }
+}
+
+
+@media only screen and (max-width: 420px) { //average screen size for plus sized phones
+
+}
+
+
+@media only screen and (max-width: 375px) { //average screen size for regular phones
+    
+    .menu-text {
+        
+        h2{
+            font-size: 15px;
+            margin: 2vw;
+        }
+        .call-text{
+            font-size: 20px; 
+        }
+    }
+
+    .call-button{
+        height:50px;
+        width: 250px;
+        border-radius:50px;
+        background-color: $main-orange;
+        color: white; 
+        font-size: 17.5px;
+        font-family: montserrat; 
+        margin-bottom: 50px; 
+    }
+    
+    .product{
+        row-gap: 40px; 
+    }
+    .product-container{
+        width: 90%;
+        height: 87%;
+        .text-container{
+            background-color: s; 
+            width: 100%; 
+            padding: 20px;
+            position: relative;
+            bottom: 14%;
+            border-radius: 0 0 25px 25px;
+    }
+    img{
+        width: 50vw;
+        margin-top: 5px; 
+    }
+}
+}
+
+

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakery Homepage</title>
+
+    
+
+<link href="/app/styles/sass/main.css" rel="stylesheet" /> <!-- links final css file when scss is compiled -->
+</head>
+<body>
+    
+<header class="header">
+
+    <div class="overlay"></div>
+
+    <nav class="flex flex-jc-sb flex-ai-c"> <!-- class="flex" is a helper class "styles in globals"-->
+        <a href="/index.html" class="header-logo">LOGO</a>
+
+        <a id="btnHamburger" href="#" class="header-menu hide-for-desktop">
+            <span></span>
+            <span></span
+            ><span></span>
+        </a>
+
+
+        <!--Top nav links on desktop view-->
+        <div class="header-links flex flex-jc-sb hide-for-mobile">
+            <a href="/app/pages/menu.html">Menu</a>
+            <a href="/app/pages/aboutus.html">About Us</a>
+            <a href="/app/pages/contact.html">Contact Us</a>
+        </div>
+
+        
+
+        <!--Top nav search bar on desktop view-->
+        <div class="header-search-bar hide-for-mobile"> <!--Search bar container-->
+            <input name="" type="text" placeholder="Search for items..." class="header-search-bar-text" /> <!--Search bar text/input GUI-->          
+            <button type="button" class="header-search-bar-button"> <!--Search button-->
+                <img src="/resources/icons/search.svg" class="icon-small"/> <!-- search icon-->
+            </button>
+        </div>
+
+        <!-- Cart button on desktop view-->
+        <div class="cart-container">
+            <button type="button" class="cart cart-header hide-for-mobile" onclick="location.href = '/app/pages/cart.html';" >
+                <img src="/resources/icons/shopping-basket.svg" class="icon-medium"/>  <!--Cart icon-->
+            </button>
+            <div class="cart-number">
+                <span>0</span>
+            </div>
+        </div>
+
+    </nav>
+    <!--Mobile dropdown hamburger menu on mobile view-->
+    <div class="header-mobile-menu-container ">
+        <div class="header-mobile-menu">
+            <a href="/app/pages/menu.html">Menu</a>
+            <a href="/app/pages/aboutus.html">About Us</a>
+            <a href="/app/pages/contact.html">Contact Us</a>
+            <a href="/app/pages/cart.html">Cart/Check Out</a>
+        </div>
+    </div>
+
+</header>
+
+
+<!--Cart icon for mobile view-->
+<div class="fixed-container"> 
+    <button type="button" class="cart cart-header hide-for-desktop" onclick="location.href = '/app/pages/cart.html';" >
+        <img src="/resources/icons/shopping-basket.svg" />  
+    </button>
+</div>
+    <!--Mobile cart end-->
+
+
+
+<div class="body-item flex flex-ai-c flex-jc-c"> <!--Container to help center child element int the center of the page-->
+    <div class="body-rectangle flex flex-jc-c">
+        <h1 class="heading">contact us</h1>
+    </div>
+</div>
+
+
+
+    <div class="contact-container flex flex-ai-c flex-jc-c">
+        <div class="contact-buttons ">
+            <button id="button" class="inactive">
+                <svg xmlns="http://www.w3.org/2000/svg" class="svgPin icon-medium" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" >
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <p>No address available</p>
+            </button>
+    
+            <button id="button" class="inactive">
+                <svg xmlns="http://www.w3.org/2000/svg" class="svgPhone icon-medium" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" >
+                <path d="M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94m-1 7.98v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                <p>+0 123 456 789</p>
+            </button>
+            
+            <button id="button" class="active">
+                <svg xmlns="http://www.w3.org/2000/svg" class="svgMail icon-medium" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" >
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <p>bakery@gmail.com</p>
+            </button>
+            
+            
+        </div>
+    </div>
+
+
+
+
+
+
+<script src="/app/js/script.js"></script> <!-- links javascript file -->
+<script src="/app/js/cart.js"></script> <!-- links javascript file -->
+</body>
+</html>

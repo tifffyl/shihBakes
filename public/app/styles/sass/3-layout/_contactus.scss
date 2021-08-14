@@ -1,0 +1,62 @@
+h1{
+    font-size: 8vw;
+    margin-top: 5rem;
+    color: $main-orange; 
+}
+
+
+.contact-container{
+    position: absolute; 
+    top: 25rem; 
+    width: 100%; 
+    padding: 1rem; 
+    z-index: 2;
+    
+    .contact-buttons{
+        width: auto;
+        z-index: 3; 
+        button{
+            margin: 1rem 1rem;               
+            border-radius: 10px;
+            height: 7.5rem;
+            width: 17rem;  
+            font-family: montserrat;
+            z-index: 4;
+        }
+        p{
+            font-size: 20px; 
+        }
+    }
+    
+}
+
+
+
+.active{
+    
+    background: $main-orange; 
+    
+    svg{
+        stroke: white ; 
+    }
+
+    p{
+        color: white; 
+    }
+}
+
+.inactive{
+    
+    background: none; 
+
+    svg{
+        stroke: $main-orange; 
+    }
+
+    p{
+        color: $main-orange; 
+    }
+}
+
+
+

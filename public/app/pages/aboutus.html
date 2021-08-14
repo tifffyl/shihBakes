@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakery Homepage</title>
+
+    
+
+<link href="/app/styles/sass/main.css" rel="stylesheet" /> <!-- links final css file when scss is compiled -->
+</head>
+<body>
+    
+<header class="header">
+
+    <div class="overlay"></div>
+
+    <nav class="flex flex-jc-sb flex-ai-c"> <!-- class="flex" is a helper class "styles in globals"-->
+        <a href="/index.html" class="header-logo">LOGO</a>
+
+        <a id="btnHamburger" href="#" class="header-menu hide-for-desktop">
+            <span></span>
+            <span></span
+            ><span></span>
+        </a>
+
+
+        <!--Top nav links on desktop view-->
+        <div class="header-links flex flex-jc-sb hide-for-mobile">
+            <a href="/app/pages/menu.html">Menu</a>
+            <a href="/app/pages/aboutus.html">About Us</a>
+            <a href="/app/pages/contact.html">Contact Us</a>
+        </div>
+
+        
+
+        <!--Top nav search bar on desktop view-->
+        <div class="header-search-bar hide-for-mobile"> <!--Search bar container-->
+            <input name="" type="text" placeholder="Search for items..." class="header-search-bar-text" /> <!--Search bar text/input GUI-->          
+            <button type="button" class="header-search-bar-button"> <!--Search button-->
+                <img src="/resources/icons/search.svg" class="icon-small"/> <!-- search icon-->
+            </button>
+        </div>
+
+        <!-- Cart button on desktop view-->
+        <div class="cart-container">
+            <button type="button" class="cart cart-header hide-for-mobile" onclick="location.href = '/app/pages/cart.html';" >
+                <img src="/resources/icons/shopping-basket.svg" class="icon-medium"/>  <!--Cart icon-->
+            </button>
+            <div class="cart-number">
+                <span>0</span>
+            </div>
+        </div>
+
+    </nav>
+
+    <div class="header-mobile-menu-container ">
+        <div class="header-mobile-menu">
+            <a href="/app/pages/menu.html">Menu</a>
+            <a href="/app/pages/aboutus.html">About Us</a>
+            <a href="/app/pages/contact.html">Contact Us</a>
+            <a href="/app/pages/cart.html">Cart/Check Out</a>
+        </div>
+    </div>
+
+</header>
+
+<!--Cart icon for mobile view-->
+<div class="fixed-container"> 
+    <button type="button" class="cart cart-header hide-for-desktop" onclick="location.href = '/app/pages/cart.html';" >
+        <img src="/resources/icons/shopping-basket.svg" />
+    </button>
+</div>
+<!--Mobile cart end-->
+
+
+<div class="body-item flex flex-ai-c flex-jc-c"> <!--Container to help center child element int the center of the page-->
+    <div class="body-rectangle flex flex-jc-c">
+        <h1 class="heading">about us</h1>
+        
+    </div>
+</div>
+
+
+
+
+<script src="/app/js/script.js"></script> <!-- links javascript file -->
+<script src="/app/js/cart.js"></script> <!-- links javascript file -->
+</body>
+</html>

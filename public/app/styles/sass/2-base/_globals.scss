@@ -1,0 +1,98 @@
+//boilerplate styles 
+
+html {
+    font-size: 100%; //sizes font as default browser
+    box-sizing: border-box; //Makes size of elements include padding in the final width 
+}
+
+
+//inherits the box-sixing and border box to all elements 
+*, *::before, *::after {
+    box-sizing: inherit; 
+
+}
+
+//global resets (default styles)
+body {
+    margin: 0;
+    padding: 0; 
+    font-family: 'Montserrat', sans-serif; 
+    line-height: 1.3; //allows for spacing between lines
+}
+
+button {
+    border: none; 
+}
+
+a{
+    cursor: pointer; //when hovering over a element, pointer becomes cursor. non-functional requirement
+    text-decoration: none; 
+}
+
+
+
+
+//flexbox styles 
+.flex {
+    display: flex; 
+
+    //flexbox "properties"
+    &-jc-sb { 
+        justify-content: space-between;
+    }
+
+    &-jc-c {
+        justify-content: center;
+    }
+
+    &-ai-c {
+        align-items: center;
+    }
+
+    &-jc-se{
+        justify-content: space-evenly;
+    }
+}
+
+
+
+
+.heading{
+    font-size: 10vw; 
+    margin: 7.5% 0 0 0;
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 375px) {
+    .heading{
+        font-size: 60px; 
+    }
+}
+
+.body-item {
+    padding: 2rem;
+    margin-top: 80px; 
+}
+
+
+//stops body item from starting too low down the page
+@media only screen and (min-width: 1200px){
+    .body-item{
+        margin-top: 0; 
+    }
+}
+
+.body-rectangle {
+    background-color: $cream;
+    height: 1000px;
+    width: 100%;
+    z-index: -10;
+    border-radius: 3vw; 
+   }
+
+   @media only screen and (max-width: 375px) {
+       .body-item{
+           padding: 1rem;
+       }
+   }

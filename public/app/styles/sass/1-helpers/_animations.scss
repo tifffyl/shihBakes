@@ -1,0 +1,20 @@
+
+@keyframes fade-in {
+    from{ //initial styles go here
+        opacity: 0;  
+    }
+    to { //end styles go here
+        opacity: 1; 
+    }
+}
+
+
+
+@keyframes fade-out {
+    from{
+        opacity: 1; 
+    }
+    to {
+        opacity: 0;  
+    }
+}

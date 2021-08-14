@@ -1,0 +1,59 @@
+
+
+ 
+
+   .body-elements {
+   
+   &-circle {
+    position: absolute;
+    border-radius: 50%;
+    width: 37.5vw;
+    height: 37.5vw;     
+    background-color: $main-orange;  
+     top: 200px; 
+     right: 10vw; 
+   }
+
+   &-image {
+     width: 50vw; 
+     height: auto; 
+      position: absolute; 
+      top: 250px; 
+     right: 20vw; 
+   }
+
+   &-text {
+    position: absolute; 
+    top: 30vw; 
+     left: 12vw;  
+
+     h1 {
+       font-size: 7vw;
+       color: $main-orange; 
+     }
+     h3 {
+       font-size: 5vw; 
+       color: $main-orange; 
+     }
+   }
+
+  }
+
+
+  
+
+   
+
+  
+
+  .menu-button {
+    position: absolute;
+    top: 12rem;
+    left: 50%;
+    transform: translateX(-50%); 
+    background-color: $yellow; 
+    padding: 15px 25px 15px 25px;
+    color: $dark-orange; 
+    border-radius: 10px; 
+    z-index: 1; 
+  }

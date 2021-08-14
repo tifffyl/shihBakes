@@ -1,0 +1,290 @@
+ //cart button
+.cart {
+    background-color: $main-orange;
+    height:3.75rem; 
+    width: 3.75rem;
+    border-radius: 50%;
+    
+
+    //basket icon
+    img{
+        height: 1.56rem;
+        width: 1.56rem;
+    }
+
+    &-body {
+        height: 80px;
+        width: 80px;
+
+        img {
+            height: 2rem;
+            width: 2rem; 
+        }
+
+
+    }
+
+    &:hover {
+        transition: opacity 300ms ease-in-out; 
+        opacity: 0.8; 
+    }
+
+    }
+
+    .fixed-container {
+        position:fixed; 
+        right:  6vw; 
+        bottom: 7.5vh; 
+        z-index: 2;
+        height:80px;
+        width: 80px; 
+    }
+
+
+
+
+
+
+    //cart page styles
+
+    .cart-nav{
+        
+        button{ //back button
+            position: absolute; 
+            top: 30px; 
+            left: 1.5rem; 
+            font-size: 30px; 
+            background: none; 
+        }
+        p{
+            position: absolute; 
+            top: 0; 
+            left: 50%; 
+            transform: translateX(-50%);
+            font-family: montserrat;
+            font-weight: 700;
+            font-size: 30px;  
+            color: $main-orange;
+        }
+    }
+
+
+    .cart-number{
+        background-color: rgb(255, 127, 22); 
+        height: 25px; 
+        width: 25px; 
+        border-radius: 30px; 
+        text-align: center; 
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        bottom: 55px; 
+        left: 45px; 
+        span{
+            color: white;
+            font-size: 12px; 
+        }
+    }
+
+    .cart-container{
+        height: 60px; 
+        width: 60px; 
+    }
+
+
+.menu-redirect{ 
+    font-size: 20px; 
+    color: $main-orange; 
+    text-decoration: underline 2.5px; 
+}
+
+@media only screen and (max-width:4000px) { 
+
+}
+
+
+
+$desktop: 1400px;
+$tablet: 780px;
+$phone: 375px; 
+
+@media only screen and (max-width: 1200px) { //makes product taller, and wider to fit all the text
+
+}
+
+
+@media only screen and (max-width: 780px) {
+
+}
+
+
+@media only screen and (max-width: 750px) {
+
+}
+
+
+@media only screen and (max-width: 420px) { //average screen size for plus sized phones
+
+}
+
+
+@media only screen and (min-width: 0px) { //average screen size for regular phones
+    .products-container {
+        margin: 8rem 2rem 8rem 2rem;
+        text-align: center;
+        h2{
+            font-size: 30px; 
+            color: $black; 
+        }
+    }
+    
+    .products{
+        width: 100%; 
+        height: auto; 
+        padding: 4vw 0vw;
+        border-top: solid 2.5px #E3E3E3; 
+
+        .container-one{
+            display: flex; 
+            justify-content: space-between;
+
+            .product-information{
+                width: 62.5%;
+
+                .container-two{
+                    display: flex;
+                    align-items: baseline; 
+                    height: auto; 
+                    justify-content: space-between;
+
+                    .dollar-sign{
+                        font-size: 2vw;
+                        position: relative; 
+                        bottom: 1vw; 
+                    }
+                }
+                .price{
+                    text-align: left;
+                    padding: 1vw 4vw;
+                    color: $light-grey;  
+                }
+                .product-quantity{
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    margin-right: 5vw; 
+                    padding: 5vw;
+                    button{
+                        height: 8.8vw; 
+                        width: 6vw;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        
+                    }
+                    .quantity-button-minus{
+                            border-radius: 2vw 0 0 2vw; 
+                            background-color: #E3E3E3; 
+                            
+                            .minus-icon{
+                                width: 2vw;
+                                height: 2vw; 
+                                position: relative;
+                            }
+                        
+                    }
+                    .quantity-button-add{
+                        border-radius: 0 2vw 2vw 0; 
+                        background-color: #E3E3E3;
+
+                        .add-icon{
+                            width: 2vw;
+                            height: 2vw; 
+                            position: relative;
+                            right: 0.5vw;
+                        }
+                    }
+                    .cart-item-quantity{
+                        padding: 1.5vw 3vw; 
+                        border: solid 1vw #E3E3E3;
+                        
+                    }
+                }
+            }
+        }
+            font-size: 3vw;
+        }
+        .cart-product-image{
+            padding: 20px; 
+            height: 27vw; 
+            width: 27vw; 
+        }
+
+        .check-out-button{
+            position: fixed; 
+            bottom: 5vw;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 5vw 10vw 5vw 10vw; 
+            background-color: $main-orange;
+            border-radius: 4vw; 
+            font-size: 5vw;
+            font-family: montserrat; 
+            color: white; 
+            display: flex;
+            width: 90%; 
+            justify-content: space-between;
+
+            &:hover{
+                animation: opacity 3s ease-in-out;
+                opacity: 0.8;
+            }
+        }
+
+        .total-info{
+            border-top: solid 2.5px $light-grey;
+            padding-bottom: 20vw;
+            .total-items{
+                text-align: left;
+                font-size: 3vw; 
+                padding: 5px;
+                color: $light-grey; 
+            }
+            .basket-total{
+                text-align: right;
+                font-size: 5vw; 
+                .text-info{
+                    color: $light-grey;
+                    font-size: 4.5vw;
+                    span{
+                        color: black;
+                        font-size: 5vw;
+                        padding-left: 5vw; 
+                    }
+                }
+            }
+        }
+        
+}
+
+
+
+
+.product-color{
+    height: 30vw; 
+    width: 30vw; 
+    z-index: -1; 
+    border-radius: 20px; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.pineapple-cake{
+    background-color: $light-yellow; 
+}
+
+.egg-yolk-pastry{
+    background-color: $pink; 
+}

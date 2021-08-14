@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pineapple Cake</title>
+    <link rel="stylesheet" href="/app/styles/sass/main.css" />
+
+</head>
+<header class="header">
+
+    <div class="overlay"></div>
+
+    <nav class="flex flex-jc-sb flex-ai-c navbar"> <!-- class="flex" is a helper class "styles in globals"-->
+        
+        
+        <a href="/index.html" class="header-logo">LOGO</a>
+
+        <a id="btnHamburger" href="#" class="header-menu hide-for-desktop">
+            <span></span>
+            <span></span
+            ><span></span>
+        </a>
+
+        
+        <!--Top nav links on desktop view-->
+        <div class="header-links flex flex-jc-sb hide-for-mobile">
+            <a href="/app/pages/menu.html">Menu</a>
+            <a href="/app/pages/aboutus.html">About Us</a>
+            <a href="/app/pages/contact.html">Contact Us</a>
+        </div>
+
+        
+
+        <!--Top nav search bar on desktop view-->
+        <div class="header-search-bar hide-for-mobile"> <!--Search bar container-->
+            <input name="" type="text" placeholder="Search for items..." class="header-search-bar-text" /> <!--Search bar text/input GUI-->          
+            <button type="button" class="header-search-bar-button"> <!--Search button-->
+                <img src="/resources/icons/search.svg" class="icon-small"/> <!-- search icon-->
+            </button>
+        </div>
+
+        <!-- Cart button on desktop view-->
+        <div class="cart-container">
+            <button type="button" class="cart cart-header hide-for-mobile" onclick="location.href = '/app/pages/cart.html';" >
+                <img src="/resources/icons/shopping-basket.svg" class="icon-medium"/>  <!--Cart icon-->
+            </button>
+            <div class="cart-number">
+                <span>0</span>
+            </div>
+        </div>
+        <!--END OF DESKTOP CART BUTTON-->
+
+    </nav>
+
+    <div class="header-mobile-menu-container ">
+        <div class="header-mobile-menu">
+            <a href="/app/pages/menu.html">Menu</a>
+            <a href="/app/pages/aboutus.html">About Us</a>
+            <a href="/app/pages/contact.html">Contact Us</a>
+            <a href="/app/pages/cart.html">Cart/Check Out</a>
+        </div>
+    </div>
+
+</header>
+<body>
+    
+    
+
+    <!--Cart button on mobile-->
+    <div class="fixed-container"> 
+        <button type="button" class="cart cart-header hide-for-desktop" onclick="location.href = '/app/pages/cart.html';" >
+            <img src="/resources/icons/shopping-basket.svg"/>  
+        </button>
+    </div>
+    <!--Mobile cart button END-->
+
+    
+    <!--product container-->
+    <div class="shop-item">
+        <div class="shop-item-image">
+            <img src="/resources/images/pineapple-cake.png">
+        </div>
+        <div class="shop-item-title">Pineapple Cake</div>
+        <span class="shop-item-price">$1.20AU/Piece</span>
+        <div class="shop-item-quantity">
+            <span class="hidden-text"></span>
+            <div>
+            <span class="shop-item-quantity-text">Select quantity :</span>
+            <input type="number" class="shop-item-quantity-input" placeholder="0">
+            </div>
+        </div>
+        <div class="shop-item-button">
+            <button class="btn btn-primary shop-item-buttons add-to-cart product1" type="button">Add To Cart</button>
+            <button class="btn btn-secondary shop-item-buttons" type="button">Order Now</button>
+        </div>
+        
+        <div class="shop-item-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut reprehenderit sed ullam amet? Nulla dolor voluptas porro voluptate distinctio assumenda error consectetur consequuntur sapiente voluptatibus repellat atque maiores magni modi cum ad, culpa quis nisi officiis impedit tenetur ratione. Cum at atque, assumenda neque dicta aliquam maiores libero, voluptate pariatur hic exercitationem placeat enim quasi deserunt voluptatibus consectetur itaque reprehenderit aliquid dolore suscipit! Laboriosam suscipit error dolores, mollitia amet, sit doloremque provident ab voluptates animi numquam. Id atque enim minima?</div>
+    </div>
+
+
+
+
+
+
+</body>
+
+<!-- links javascript file -->
+<script src="/app/js/script.js"></script> 
+<script src="/app/js/cart.js"></script> <!-- links javascript file -->
+</html>

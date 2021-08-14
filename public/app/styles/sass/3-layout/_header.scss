@@ -1,0 +1,265 @@
+.header {
+
+    //animation for hamburger menu into cross when opened [Using the top and bottom menu line]
+    &.open {
+        
+        .overlay {
+            display: block; 
+            animation: fade-in 300ms ease-in-out forwards ;
+        }
+
+        .header-menu{
+            >span:first-child {
+            transform: rotate(45deg); //rotate to create x shape
+            }
+
+            >span:nth-child(2) { //if span is the second child, then it will not be displayed 
+            opacity: 0; 
+            }
+
+            >span:last-child {
+            transform: rotate(-45deg); //roatet the other way to make the otehr x
+            }
+        }
+
+        .header-mobile-menu-container{
+            display: block;
+            animation: fade-in 300ms ease-in-out forwards; 
+        }
+    } 
+
+    &.close{
+
+        .overlay {
+            display: block; 
+            animation: fade-out 300ms ease-in-out forwards ;
+        } 
+        
+        .header-menu{
+            >span:first-child {
+            transform: rotate(0deg); //rotate to create x shape
+            }
+
+            >span:nth-child(2) { //if span is the second child, then it will not be displayed 
+            opacity: 1; 
+            }
+
+            >span:last-child {
+            transform: rotate(0deg); //roatet the other way to return
+            }
+        }
+
+        .header-mobile-menu-container{
+            display: none;  
+            animation: fade-out 300ms ease-in-out forwards; 
+        }
+
+    }
+
+    .overlay {
+        display: none;
+        position: fixed; 
+        top: 5.65rem; 
+        right: 0px; 
+        left: 0px; 
+        bottom: 0px; 
+        background-image: linear-gradient($main-orange, transparent );
+        z-index: 10; 
+        }
+
+
+    nav{
+        padding: 30px 40px 20px 40px;
+        background-color: white; 
+        height: 90px;
+    }
+
+    
+
+    &-logo {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: $black; 
+        text-decoration: none;
+        border:none; 
+    }
+
+    //hamburger menu
+    &-menu { //menu style for mobile view 
+        position: fixed;
+        right: 50px;
+        top: 30px; 
+
+        >span { //direct child selector, applies to all span within the header-menu element
+            display: block; 
+            width: 33px;
+            height: 6px; 
+            background-color: $black;
+            border-radius: 25px;
+            transform-origin: 3px 3px; 
+
+                &:not(:last-child){ //applies styles to eveything except the last child within the header-menu element
+                margin-bottom: 3px; 
+                }
+        }
+    }
+
+        &-mobile-menu { 
+            width: calc(100% - 3rem);
+            background: white; 
+            margin: 1.5rem; 
+            padding: 1.625rem; 
+            border-radius: 10px; 
+            
+            
+    
+            a{
+                display: block;
+                text-align: center; 
+                color: $main-orange; 
+                padding: 1.5rem;    
+            }
+    
+            &-container{
+                position: fixed;  
+                place-items: center;
+                width: 100%; 
+                height: 22.5rem;  
+                display: none; 
+                top: 7rem;
+                z-index: 20;
+            }
+        }
+    
+        &-links {
+            margin-left: 5rem; 
+            
+            a{
+                position: relative; 
+                font-family: DIN;
+                text-decoration: none; 
+                color: $light-grey;
+                font-size: $font-links;
+    
+                &:not(:last-child){
+                    margin-right: 88px;
+                }
+    
+                &::before {
+                    position: absolute; 
+                    content: ""; 
+                    display: block; 
+                    height: 4px;  
+                    left:0; 
+                    right:0; 
+                    bottom: -5px; 
+                    border-radius: 20px; 
+                    background: $main-orange; 
+                    opacity: 0; 
+                    transition: opacity 300ms ease-in-out; //animation for the opacity of text underline to ease in rather than immediately
+                }
+    
+                &:hover {
+                    color: $black; 
+    
+                    &::before {
+                        opacity: 1; 
+                    }
+                }
+            }
+        }
+
+        //search bar
+        &-search-bar {
+        height: 3.13rem;
+        width: 23.13rem;
+        border: solid 3px $light-grey;    
+        border-radius: 25px;
+        padding: 0.19rem;
+    
+        //search text (inpput element)
+        &-text{
+            border: none; 
+            background: none;
+            outline: none;
+            float: left; 
+            color: $light-grey; 
+            line-height: 35px;
+            margin-left: 20px;
+            font-family: DIN;
+            font-size: 1.06rem;
+        }
+        //search button
+        &-button{
+        background-color: $main-orange;
+        height: 2.38rem;
+        width: 2.38rem; 
+        border-radius: 50%;
+        float: right;
+
+            &:hover {
+                transition: opacity 300ms ease-in-out; 
+                opacity: 0.8; 
+            }
+        }
+
+        
+    }
+}
+
+
+
+
+    
+
+
+    
+
+
+@media only screen and (max-width: 1199px){
+    .header-logo{
+        position: fixed; 
+        top: 20px; 
+        left: 50px;  
+    }
+    .header{
+        nav{
+            position: fixed; 
+            width: 100%; 
+            top: 0px; 
+            z-index: 10;  
+        }
+    }
+
+}
+
+
+
+
+
+//visibility 
+.hide-for-mobile {
+//hide for tablet and mobile devices
+@include breakpoint-down(medium){
+    display: none; 
+    
+}
+}
+
+.hide-for-desktop { //use this class to hide elements 
+    //hide for desktop viewport widths 
+    @include breakpoint-up(large){
+        display: none;         
+    }
+}
+
+
+
+//fade 
+
+.has-fade {
+    visibility: hidden; 
+}
+
+
+
