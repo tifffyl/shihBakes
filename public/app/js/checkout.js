@@ -27,11 +27,7 @@ var cash = document.getElementById("cash");
 let form = document.getElementById("billing-form");
     
 
-if (card) {
-    card.addEventListener("click", ()=>{
-        localStorage.setItem("paymentMethod", "card");
-    })
-}
+
 if (cash){
     cash.addEventListener("click", ()=>{
         localStorage.setItem("paymentMethod", "cash");
@@ -72,6 +68,7 @@ const btnCheckOut = document.querySelector(".checkout-button")
 
 
 btnCheckOut.addEventListener("click", () => {
+    localStorage.setItem("paymentMethod", "card");
     console.log("hello world");
     let productsInCart = localStorage.getItem('productsInCart');
     productsInCart = JSON.parse(productsInCart); //parses the object as a JSON rather than Javascript 
