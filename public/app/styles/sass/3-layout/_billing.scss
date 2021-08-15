@@ -1,0 +1,171 @@
+.billing-page{
+    display: grid; 
+    grid-template-columns: 1.2fr 1fr;
+    
+}
+
+.title-label{
+    font-size: 30px; 
+}
+
+.billing-form{
+    padding: 20px 30px 20px 30%; 
+    margin: 1vw; 
+    color: rgb(116, 116, 116); 
+    height: auto;
+    border-right: solid 1px $light-grey; 
+
+    select{
+        padding: 13px; 
+        font-family: montserrat;
+        border: solid 1px $light-grey;
+        color: rgb(116, 116, 116);
+        border-radius: 5px;
+        width: 100%;
+    }
+    
+    
+    .order-status-bar{
+        .return-to-cart-button{
+            background: none;
+        }
+    }
+
+    input{
+        border: solid 1px $light-grey;
+        border-radius: 5px;
+        padding: 10px;
+        font-family: montserrat;
+        &:focus{
+            border-color: rgb(255, 193, 160);
+        }
+    }
+
+    div{
+        margin: 20px 0px 20px 0px;
+    }
+
+    
+
+    .input-long{
+        width: 100%;
+    }
+    .input-short{
+        width: 100%; 
+    }
+    .state-location{
+        display: grid; 
+        grid-template-columns: 1fr 1fr 1.5fr;
+        grid-gap: 2%; 
+        
+        span{
+            &:not(:last-child){ //applies styles to eveything except the last child within the header-menu element
+                display: grid;
+                border: solid 1px $light-grey; 
+                padding: 5px; 
+                border-radius: 5px;
+            }
+            
+        }
+        .label-small{
+            font-size: 10px; 
+        }
+        .label-big{
+            color: rgb(58, 58, 58);
+        }
+        
+        
+    }
+}
+
+.order-information{
+    margin: 80px 20px 20px 20px;
+    
+    &-products{
+        background-color: $main-orange;
+        border-radius: 10px;
+        padding: 20px; 
+        margin: 1vw; 
+        color: white;
+    }
+    .receive-date{
+        display: grid;
+        input{
+            height: 30px; 
+            border: none; 
+            border-radius: 7px;
+            padding: 10px; 
+            color: $main-orange;
+        }
+    }
+    .checkout-button-types{
+        display: grid;
+        padding: 20px; 
+        
+        button{
+            margin: 10px 0px 10px 0px; 
+            padding: 15px;
+            border-radius: 10px; 
+            font-size: 18px;
+            font-family: montserrat;
+        }
+        .checkout-button{
+            background-color: $main-orange;
+            color: white;
+        }
+        .or-text{
+            display: flex;
+            justify-content: space-evenly;
+            color: $light-grey;
+            .line{
+                width: 35%; 
+                border-top: solid 1px $light-grey; 
+                position: relative;
+                top: 50%; 
+            }
+            
+        }
+        
+    }
+}
+
+
+
+@media  only screen and (max-width: 1150px){
+
+    .billing-form{
+        padding: 20px 30px 20px 20%;
+    }
+}
+@media  only screen and (max-width: 900px){
+    .billing-form{
+        padding: 20px 30px 20px 20px;
+        
+    }
+}
+@media  only screen and (max-width: 655px){
+
+    .billing-form{
+        .state-location{
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px; 
+        }
+        .input-short{
+            width: 100%; 
+            padding: 0;
+            grid-row: 1; 
+            grid-column: 1/3;
+            margin-bottom: 10px; 
+        }
+    }
+}
+@media  only screen and (max-width: 480px){
+
+    .billing-page{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr;
+    }
+    .order-information{
+        margin: 20px; 
+    }
+}

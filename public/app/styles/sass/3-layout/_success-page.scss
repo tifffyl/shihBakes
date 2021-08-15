@@ -1,0 +1,25 @@
+.page-centerer{
+    display: grid; 
+    place-content: center;
+    height: 100vh; 
+    
+
+    .success{
+        padding: 20vw 20vw 30vh 20vw;
+        text-align: center;
+        height: auto; 
+        h3{
+            width: 100%;
+        }
+        .return-to-home{
+            position: relative;
+            top: 20px;
+            color: white; 
+            padding: 15px 30px;
+            border-radius: 25px;
+            background-color: $main-orange;
+            
+        }
+    }
+}
+

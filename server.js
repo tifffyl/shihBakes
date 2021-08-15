@@ -24,12 +24,15 @@ app.post("/create-checkout-session", async (req, res) => {
   try {
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
+      shipping_address_collection: {
+        allowed_countries: ['AU'],
+        },
       mode: "payment",
       line_items: req.body.items.map(item => {
         const storeItem = storeItems.get(item.id)
         return {
           price_data: {
-            currency: "usd",
+            currency: "aud",
             product_data: {
               name: storeItem.name,
             },
@@ -39,7 +42,7 @@ app.post("/create-checkout-session", async (req, res) => {
         }
       }),
       success_url: `${process.env.SERVER_URL}/success.html`,
-      cancel_url: `${process.env.SERVER_URL}/cancel.html`,
+      cancel_url: `${process.env.SERVER_URL}/app/pages/billing.html`,
     })
     res.json({ url: session.url })
   } catch (e) {
