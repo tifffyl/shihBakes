@@ -1,4 +1,3 @@
-const e = require("express");
 
 const SERVER_URL_STRIPE = "http://localhost:3000/create-checkout-session"
 
