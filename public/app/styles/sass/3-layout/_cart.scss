@@ -99,39 +99,16 @@
     text-decoration: underline 2.5px; 
 }
 
-@media only screen and (max-width:4000px) { 
-
-}
 
 
 
-$desktop: 1400px;
-$tablet: 780px;
-$phone: 375px; 
-
-@media only screen and (max-width: 1200px) { //makes product taller, and wider to fit all the text
-
-}
 
 
-@media only screen and (max-width: 780px) {
-
-}
-
-
-@media only screen and (max-width: 750px) {
-
-}
-
-
-@media only screen and (max-width: 420px) { //average screen size for plus sized phones
-
-}
 
 
 @media only screen and (min-width: 0px) { //average screen size for regular phones
     .products-container {
-        margin: 8rem 2rem 8rem 2rem;
+        margin: 7rem 2rem 8rem 2rem;
         text-align: center;
         h2{
             font-size: 30px; 
@@ -221,25 +198,61 @@ $phone: 375px;
             width: 27vw; 
         }
 
+        .or-text{
+            justify-content: space-evenly;
+            color: $light-grey;
+            position: fixed; 
+            bottom: 22vw; 
+            font-size: 5vw; 
+            right: 48vw; 
+            
+            .line-1{
+                width: 35%; 
+                border-top: solid 0.7vw $light-grey; 
+                position: fixed;
+                bottom: 25vw; 
+                left: 9vw; 
+            }
+            .line-2{
+                width: 35%; 
+                border-top: solid 0.7vw $light-grey; 
+                position: fixed;
+                bottom: 25vw;
+                right: 10vw; 
+            }
+            
+            
+        }
+
         .check-out-button{
             position: fixed; 
-            bottom: 5vw;
+            
             left: 50%;
             transform: translateX(-50%);
             padding: 5vw 10vw 5vw 10vw; 
-            background-color: $main-orange;
+            text-align: center;
+            
             border-radius: 4vw; 
             font-size: 5vw;
             font-family: montserrat; 
             color: white; 
-            display: flex;
+            
             width: 90%; 
-            justify-content: space-between;
+            
 
             &:hover{
                 animation: opacity 3s ease-in-out;
                 opacity: 0.8;
             }
+        }
+        .cash-button{
+            bottom: 30vw;
+            background-color: $main-orange;
+        }
+        .card-button{
+            bottom: 5vw; 
+            background-color: $light-grey;
+            color: rgb(83, 83, 83); 
         }
 
         .total-info{
@@ -251,6 +264,19 @@ $phone: 375px;
                 padding: 5px;
                 color: $light-grey; 
             }
+            .shipping-info{
+                text-align: right;
+                font-size: 5vw;
+                .text-info{
+                    color: $light-grey;
+                    font-size: 4.5vw;
+                    span{
+                        color: black;
+                        font-size: 5vw;
+                        padding-left: 5vw; 
+                    }
+                }
+            }
             .basket-total{
                 text-align: right;
                 font-size: 5vw; 
@@ -261,6 +287,7 @@ $phone: 375px;
                         color: black;
                         font-size: 5vw;
                         padding-left: 5vw; 
+                        padding-top: 1vw;
                     }
                 }
             }

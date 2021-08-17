@@ -470,7 +470,7 @@ a {
 
 @media only screen and (min-width: 0px) {
   .products-container {
-    margin: 8rem 2rem 8rem 2rem;
+    margin: 7rem 2rem 8rem 2rem;
     text-align: center;
   }
   .products-container h2 {
@@ -571,30 +571,56 @@ a {
     height: 27vw;
     width: 27vw;
   }
+  .or-text {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    color: #B0B0B0;
+    position: fixed;
+    bottom: 22vw;
+    font-size: 5vw;
+    right: 48vw;
+  }
+  .or-text .line-1 {
+    width: 35%;
+    border-top: solid 0.7vw #B0B0B0;
+    position: fixed;
+    bottom: 25vw;
+    left: 9vw;
+  }
+  .or-text .line-2 {
+    width: 35%;
+    border-top: solid 0.7vw #B0B0B0;
+    position: fixed;
+    bottom: 25vw;
+    right: 10vw;
+  }
   .check-out-button {
     position: fixed;
-    bottom: 5vw;
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
     padding: 5vw 10vw 5vw 10vw;
-    background-color: #FDA768;
+    text-align: center;
     border-radius: 4vw;
     font-size: 5vw;
     font-family: montserrat;
     color: white;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     width: 90%;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
   }
   .check-out-button:hover {
     -webkit-animation: opacity 3s ease-in-out;
             animation: opacity 3s ease-in-out;
     opacity: 0.8;
+  }
+  .cash-button {
+    bottom: 30vw;
+    background-color: #FDA768;
+  }
+  .card-button {
+    bottom: 5vw;
+    background-color: #B0B0B0;
+    color: #535353;
   }
   .total-info {
     border-top: solid 2.5px #B0B0B0;
@@ -605,6 +631,19 @@ a {
     font-size: 3vw;
     padding: 5px;
     color: #B0B0B0;
+  }
+  .total-info .shipping-info {
+    text-align: right;
+    font-size: 5vw;
+  }
+  .total-info .shipping-info .text-info {
+    color: #B0B0B0;
+    font-size: 4.5vw;
+  }
+  .total-info .shipping-info .text-info span {
+    color: black;
+    font-size: 5vw;
+    padding-left: 5vw;
   }
   .total-info .basket-total {
     text-align: right;
@@ -618,6 +657,7 @@ a {
     color: black;
     font-size: 5vw;
     padding-left: 5vw;
+    padding-top: 1vw;
   }
 }
 
@@ -1298,21 +1338,54 @@ h1 {
   color: white;
 }
 
-.order-information .checkout-button-types .or-text {
+.text-container-2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  color: #B0B0B0;
+  padding: 10vw;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 90vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.order-information .checkout-button-types .or-text .line {
-  width: 35%;
-  border-top: solid 1px #B0B0B0;
-  position: relative;
-  top: 50%;
+.text-container-2 .text {
+  padding: 20px;
+}
+
+.text-container-2 .error-message {
+  font-size: 13px;
+  color: red;
+}
+
+.text-container-2 .text-small {
+  font-size: 10px;
+}
+
+.text-container-2 .dropdown-menu {
+  padding: 10px 0px 10px 0px;
+}
+
+.text-container-2 .dropdown-menu select {
+  padding: 10px 0px 10px 10px;
+  border-radius: 5px;
+  background-color: white;
+  border: solid 1.5px #B0B0B0;
+  font-family: montserrat;
+  margin: 5px 0px 10px 0px;
+}
+
+.text-container-2 .checkout-button {
+  padding: 20px 30px;
+  border-radius: 10px;
+  background-color: #FDA768;
+  color: white;
+  font-family: montserrat;
+  margin: 20px;
 }
 
 @media only screen and (max-width: 1150px) {

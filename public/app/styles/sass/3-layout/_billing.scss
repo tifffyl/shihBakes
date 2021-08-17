@@ -113,20 +113,52 @@
             background-color: $main-orange;
             color: white;
         }
-        .or-text{
-            display: flex;
-            justify-content: space-evenly;
-            color: $light-grey;
-            .line{
-                width: 35%; 
-                border-top: solid 1px $light-grey; 
-                position: relative;
-                top: 50%; 
-            }
-            
+        
+        
+    }
+}
+
+//for card billing page 
+.text-container-2{
+    display: flex;
+    padding: 10vw; 
+    text-align: center;
+    justify-content: center;
+    height: 90vh;
+    align-items: center;
+    .text{
+        padding: 20px;
+    }
+    .error-message{
+        font-size: 13px; 
+        color: red;
+    }
+
+    .text-small{
+        font-size: 10px;
+    }
+
+    .dropdown-menu{
+        padding: 10px 0px 10px 0px;  
+        select{
+            padding: 10px 0px 10px 10px; 
+            border-radius: 5px;
+            background-color: white;
+            border: solid 1.5px $light-grey;
+            font-family: montserrat; 
+            margin: 5px 0px 10px 0px;
         }
         
     }
+    .checkout-button{
+        padding: 20px 30px; 
+        border-radius: 10px;
+        background-color: $main-orange;
+        color: white;
+        font-family: montserrat;
+        margin: 20px; 
+    }
+    
 }
 
 

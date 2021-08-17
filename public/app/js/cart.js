@@ -230,14 +230,27 @@ function displayCart() {
         <div class="total-info">
             <div class="total-items">Total Items: ${cartNumbers}</div>
             <div class="basket-total">
-                <span class="text-info"><span">Total: <span>$${insertDecimal(cartCost)}AU</span> 
+                <span class="text-info"><span>Subtotal: <span>$${insertDecimal(cartCost)}AU</span> 
             </div>
-            <div class="shipping-info"></div>
+            <div class="basket-total">
+                <span class="text-info"><span>Shipping: <span>$10.00AU</span> 
+            </div>
+            <div class="basket-total">
+                <span class="text-info"><span>Total: <span>$${insertDecimal(cartCost + 1000)}AU</span> 
+            </div>
+            
         </div>
 
-        <button class="check-out-button" onclick="location.href = '/app/pages/billing.html';">
-        <div>Checkout</div>
-        ${insertDecimal(cartCost)}
+        <button class="check-out-button cash-button" onclick="location.href = '/app/pages/billing.html';">
+        Pay by cash
+        </button>
+        <div class="or-text">
+                <div class="line-1"></div>
+                <div>or</div>
+                <div class="line-2"></div>
+        </div>
+        <button class="check-out-button card-button" onclick="location.href = '/app/pages/billing-card.html';">
+        Pay by card
         </button>
         
         `
