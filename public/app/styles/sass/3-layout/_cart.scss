@@ -45,7 +45,7 @@
 
 
 
-    //cart page styles
+//cart page styles
 
     .cart-nav{
         
@@ -98,10 +98,6 @@
     color: $main-orange; 
     text-decoration: underline 2.5px; 
 }
-
-
-
-
 
 
 
@@ -190,8 +186,8 @@
                 }
             }
         }
-            font-size: 3vw;
-        }
+        font-size: 3vw;
+    }
         .cart-product-image{
             padding: 20px; 
             height: 27vw; 
@@ -201,7 +197,6 @@
         .or-text{
             justify-content: space-evenly;
             color: $light-grey;
-            position: fixed; 
             bottom: 22vw; 
             font-size: 5vw; 
             right: 48vw; 
@@ -209,26 +204,24 @@
             .line-1{
                 width: 35%; 
                 border-top: solid 0.7vw $light-grey; 
-                position: fixed;
-                bottom: 25vw; 
-                left: 9vw; 
             }
             .line-2{
                 width: 35%; 
                 border-top: solid 0.7vw $light-grey; 
-                position: fixed;
-                bottom: 25vw;
-                right: 10vw; 
             }
             
             
         }
 
-        .check-out-button{
+        .checkout-buttons{
             position: fixed; 
-            
-            left: 50%;
+            bottom: 5vh;
+            width: 100vw; 
+            left: 50%; 
             transform: translateX(-50%);
+        }
+        .check-out-button{
+            
             padding: 5vw 10vw 5vw 10vw; 
             text-align: center;
             
@@ -246,11 +239,9 @@
             }
         }
         .cash-button{
-            bottom: 30vw;
             background-color: $main-orange;
         }
         .card-button{
-            bottom: 5vw; 
             background-color: $light-grey;
             color: rgb(83, 83, 83); 
         }
@@ -293,6 +284,22 @@
             }
         }
         
+}
+
+//adds more spacing between total porice and the checkout buttons
+@media only screen and (min-width: 500px) {
+    .total-info{
+        padding-bottom: 200px; 
+    }
+}
+
+@media only screen and (min-width: 750px) {
+    .total-info{
+        padding-bottom: 70px;
+    }
+    .checkout-buttons{
+        position: relative;
+    }
 }
 
 

@@ -277,7 +277,7 @@ a {
 
 .header-links a {
   position: relative;
-  font-family: DIN;
+  font-family: montserrat;
   text-decoration: none;
   color: #B0B0B0;
   font-size: 1rem;
@@ -576,7 +576,6 @@ a {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
     color: #B0B0B0;
-    position: fixed;
     bottom: 22vw;
     font-size: 5vw;
     right: 48vw;
@@ -584,22 +583,20 @@ a {
   .or-text .line-1 {
     width: 35%;
     border-top: solid 0.7vw #B0B0B0;
-    position: fixed;
-    bottom: 25vw;
-    left: 9vw;
   }
   .or-text .line-2 {
     width: 35%;
     border-top: solid 0.7vw #B0B0B0;
-    position: fixed;
-    bottom: 25vw;
-    right: 10vw;
   }
-  .check-out-button {
+  .checkout-buttons {
     position: fixed;
+    bottom: 5vh;
+    width: 100vw;
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
+  }
+  .check-out-button {
     padding: 5vw 10vw 5vw 10vw;
     text-align: center;
     border-radius: 4vw;
@@ -614,11 +611,9 @@ a {
     opacity: 0.8;
   }
   .cash-button {
-    bottom: 30vw;
     background-color: #FDA768;
   }
   .card-button {
-    bottom: 5vw;
     background-color: #B0B0B0;
     color: #535353;
   }
@@ -658,6 +653,21 @@ a {
     font-size: 5vw;
     padding-left: 5vw;
     padding-top: 1vw;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  .total-info {
+    padding-bottom: 200px;
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  .total-info {
+    padding-bottom: 70px;
+  }
+  .checkout-buttons {
+    position: relative;
   }
 }
 

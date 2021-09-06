@@ -16,7 +16,7 @@
         
     <div class="billing-form">
 
-        <div class="order-status-bar">
+        <div class="order-status-bar"> 
             <button onclick="location.href='/app/pages/cart.html';" class="return-to-cart-button"> 
                 <svg xmlns="http://www.w3.org/2000/svg" width="24.621" height="20.243" viewBox="0 0 24.621 20.243">
                     <g id="back_icon" data-name="back icon" transform="translate(-36.379 -41.379)">
@@ -49,7 +49,7 @@
             <input id="line-2" class="input-long" placeholder="Line 2:">
         </div>
         <div>
-            <select id="city-suburb" class="city-suburb" required>
+            <select id="city-suburb" class="city-suburb" required> <!-- dropdown containing suburbs-->
                 <option value="">City/Suburb</option>
                 <option value="Balwyn">Balwyn</option>
                 <option value="Balwyn East">Balwyn East</option>
@@ -118,7 +118,7 @@
                 <label class="label-big">Victoria</label>
             </span>
 
-            <span class="input-short">
+            <span class="input-short"> <!--Dropdown containing postcodes-->
                 <select id="postal-code" class="postal-code-dropdown" required>
                     <option value="">Postal Code</option>
                     <option value="3107">3107</option>
@@ -180,7 +180,7 @@
         <div class="checkout-button-types">
             <!--the type="submit" attribute gets everything inside the <form> tags and executes  'submit' code which in this case is the save_data() function-->
             
-            <button id="cash" class="checkout-by-cash"  type="submit" value="cash-button">Pay by cash</button>
+            <button id="cash" class="checkout-by-cash" onClick="save_data()" type="submit" value="cash-button">Submit</button>
         </div>
 
     </div>

@@ -32,24 +32,12 @@ const products = [//array containing objects (product information)
     }
 ]
 
-function cartItemLength(){
-    for (i=0; i < cartItems.length; i++){
-        console.log()
-        console.log(products[1]);
-    }
-}
-
-
-function countItemsInCart(){
-    let cartItems = document.querySelectorAll('.product')
-    console.log(cartItems.length);
-}
 
 
 
 
 
-//When button is clicked
+//When add to cart button is clicked
 if (product1) {
         product1.addEventListener('click', () => {
             let quantity = document.querySelector('.shop-item-quantity-input').value;
@@ -121,7 +109,6 @@ function cartNumbers(products, quantity) {
         quantity = 0;
     }
 
-
     if (productNumbers) { //validation to check if there are already items in the cart. Or any value stored in the local storage 
         localStorage.setItem('cartNumbers', totalItemNumber); //adds how many are user has inputed
         document.querySelector('.cart-number span').textContent = totalItemNumber; //access the text in the span in the cart button
@@ -138,11 +125,7 @@ function cartNumbers(products, quantity) {
     checkQuantity(totalItemNumber);
 }
 
-function checkQuantity(totalItemNumber){
-    if (totalItemNumber >=80){
-        console.log("your cart is full");
-    }
-}
+
 
 //stores the amount/quantity that the item is added/in the cart 
 function setItems(products, quantity){
@@ -182,6 +165,8 @@ function totalCost(products, quantity) {
     }
 }
 
+
+//function to load the html elements of items in the cart, if there is or not. 
 function displayCart() {
     let cartItems = localStorage.getItem("productsInCart");
     cartItems = JSON.parse(cartItems);
@@ -191,10 +176,10 @@ function displayCart() {
     
     let cartNumbers = localStorage.getItem("cartNumbers");
 
-
     if (cartItems && productContainer ) { //checking for existence of cart items and product containers so that the function will only run on the page that contains the product containers 
         productContainer.innerHTML = '';
-    
+        
+        //inserts html code for product items and other elements and components when there are items in cart
         Object.values(cartItems).map(item => {
             productContainer.innerHTML += `
             <div class="products">
@@ -241,20 +226,20 @@ function displayCart() {
             
         </div>
 
+        <div class="checkout-buttons">
         <button class="check-out-button cash-button" onclick="location.href = '/app/pages/billing.html';">
         Pay by cash
         </button>
         <div class="or-text">
-                <div class="line-1"></div>
-                <div>or</div>
-                <div class="line-2"></div>
+                <div> - or - </div>
+                
         </div>
         <button class="check-out-button card-button" onclick="location.href = '/app/pages/billing-card.html';">
         Pay by card
         </button>
-        
+        </div>
         `
-    } else{
+    } else{ //displays text when the cart is empty
         productContainer.innerHTML += `
         <h2 class="empty-cart">Cart is currently empty</h2>
         <a class="menu-redirect" href="/app/pages/menu.html">click here to shop our products</a>

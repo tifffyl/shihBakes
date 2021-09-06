@@ -34,5 +34,5 @@ function onLoadCartNumbers() { //stops the cart displaying 0 items when pages re
 
 
 
-
+//Runs function everytime page loads
 onLoadCartNumbers();
